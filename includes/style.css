@@ -1,0 +1,635 @@
+/*----------------------------------------------------------
+ MadBreadBand.com 2.0 STYLESHEET 
+ AUTHOR : MIKE SLATER
+ CREATED : 04.23.11
+ TABLE OF CONTENTS :
+
+ 1) CLEAR DEFAULT STYLES
+ 2) SET SITEWIDE BASE CLASSES AND TAGS
+ 3) ALL SITE LAYOUT (IN PAGE ORDER BY ELEMENT)
+ 4) INDIVIDUAL PAGE LAYOUTS
+ 5) MODULES
+ 6) ADMIN STYLES
+
+	COLOR SWATCHES :
+	#d1ba81 - background
+	#1f1406 - footer background
+	#763a23 - Links
+	#553418 - sidebar h1
+	#e3dfd8 - Main and footer Nav Link
+	#4f291a - Main nav hover/active
+	#875b43 - footer hover/active
+	#b38c60 - footer tiny print
+	#d1ba81 - footer visited
+----------------------------------------------------------*/
+
+/** -------- 1) CLEAR DEFAULT STYLES -------- **/
+html{margin:0;padding:0}body,div,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,blockquote,table,th,td,a,img,ul,li{margin:0;padding:0;border:none;outline:none;position:relative}p{margin:0 0 0.625em 0;line-height:1.5em}address,caption,cite,code,dfn,th,var{font-style:normal;font-weight:normal}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:none}a img,a:link img,a:visited img,a:hover img,a:active img{border:none;outline:none}caption,th{text-align:left}q:before,q:after{content:''}
+
+/** -------- 2) SET SITEWIDE BASE CLASSES AND TAGS -------- **/
+
+/* TAGS */
+
+h1 {
+font-size: 2.0em;
+margin: 0 0 0.625em 0;
+}
+h2 {
+font-size: 1.6em;
+margin: 0 0 0.625em 0;
+}
+h3 {
+font-size: 1.4em;
+margin: 0 0 0.625em 0;
+}
+h4 {
+font-size: 1.2em;
+margin: 0 0 0.625em 0;
+}
+h5 {
+font-size: 1.0em;
+margin: 0 0 0.625em 0;
+}
+h6 {
+font-size: 0.9em;
+margin: 0 0 0.625em 0;
+}
+
+a, a:link, a:visited {
+color: #763a23;
+text-decoration: none;
+}
+a:hover {
+color: #000;
+text-decoration: none;
+}
+a:active {
+color: #000;
+text-decoration: none;
+background: #763a23;
+position: relative;
+top: 1px;
+}
+
+em {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 3em;
+	line-height: 2.0em;
+	font-style: italic;
+}
+blockquote:before, blockquote:after {
+content: '"';
+}
+
+ul {}
+
+li {}
+
+dt, dd { float: left; }
+dt { padding: 0.5em 0.25em 0.5em 0; width: 120px; font-weight: bold; clear: left; }
+dd { padding: 0.5em 0 0 0; width: 420px; }
+
+th {}
+
+th, td {}
+
+/* ALL SLATER SITES COMMON CLASSES */
+.bold{font-weight:bold}.italic{font-style:italic}.strike{text-decoration:line-through}.vtop{vertical-align:top}.middle{vertical-align:middle}.center{text-align:center}.right{text-align:right}.left{text-align:left}.nowrap{white-space:nowrap}.breakforprint{page-break-after:always}.invisible{visibility:hidden}.hidden{display:none}.loading{background:url(/images/loadingIcon.gif) 50% 50% no-repeat}.ie6_warning{display:none}.clearboth{clear:both;}.clearleft{clear:left;}.clearright{clear:right;}.floatleft{float:left}.floatright{float:right}.formrow{margin:5px 0}.divider{margin:3em 0;height:3px;background:url(../images/bg_divider.gif) -3px 0 repeat-x;overflow:hidden}.hand{cursor:pointer}
+
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+  }
+
+.clearfix:after {
+    clear: both;
+  }
+
+.clearfix {
+    *zoom: 1;
+  }
+
+/* CUSTOM SITE CLASSES 
+---------------------------*/
+.accordian {
+  list-style-type: none;
+}
+
+.accordian li {
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border-left: 1px dotted;
+  border-bottom: 1px dotted;
+}
+
+  .accordian li h2 {
+    letter-spacing: 0.15em;
+    color: #553418;
+    cursor: pointer;
+  }
+  
+  .accordian li h3 {
+    margin: 0;
+    letter-spacing: 0.15em;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .accordian li .info {
+    padding: 1em;
+    font-size: 1.2em;
+  }
+
+  .accordian li .hide {
+    cursor: pointer;
+  }
+
+.content_list {
+  list-style-type: none;
+}
+
+.content_list li {
+  padding: 1em 0;
+  border-bottom: 1px dotted; 
+}
+
+.full_link {
+  padding: 15px;
+  width: 540px;
+  height: 40px;
+  background: url(/images/2.0/bg_fulllink.png)no-repeat;
+  color: #763b23;
+  font-weight: normal;
+  letter-spacing: 0.25em;
+  text-align: center;
+}
+
+/* DELETE */
+.full_link img {
+  display: none;
+}
+
+.main_images {
+  margin: 0 0 1em 1em;
+  float: right;
+  text-align: right;
+}
+
+.photo_credit {
+  font-size: 0.7em;
+  color: #666;
+}
+
+/* -------- 3) ALL SITE LAYOUT (IN PAGE ORDER BY ELEMENT) -------- */
+
+body {
+  background: #d1ba81;
+  font-family: Verdana, sans-serif;
+  font-size: 1.0em;
+}
+
+.container {
+  margin: 0 auto;
+  width: 818px;
+}
+
+#header {
+  width: 818px;
+  height: 390px;
+  background: url(/images/2.0/bg_header.png) no-repeat;
+}
+
+#header_link {
+  width: 550px;
+  height: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header_img {
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+}
+
+#header .but_youtube {
+  position: absolute;
+  top: 91px;
+  left: 680px;
+}
+
+#header .but_facebook {
+  position: absolute;
+  top: 90px;
+  left: 715px;
+}
+
+#header .but_twitter {
+  position: absolute;
+  top: 90px;
+  left: 750px;
+}
+
+.header_instrument {
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+#bass {
+  width: 44px;
+  height: 100px;
+  background-image: url(/images/2.0/head_bass.png);
+  top: 152px;
+  left: 323px;
+}
+
+#banjo {
+  width: 83px;
+  height: 113px;
+  background-image: url(/images/2.0/head_banjo.png);
+  top: 148px;
+  left: 387px;
+}
+
+#guitar {
+  width: 86px;
+  height: 114px;
+  background-image: url(/images/2.0/head_guitar.png);
+  top: 156px;
+  left: 485px;
+}
+
+#mando {
+  width:  97px;
+  height: 112px;
+  background-image: url(/images/2.0/head_mando.png);
+  top: 165px;
+  left: 589px;
+}
+
+#fiddle {
+  width: 63px;
+  height: 112px;
+  background-image: url(/images/2.0/head_fiddle.png);
+  top: 171px;
+  left: 703px;
+}
+
+#content {
+  font-size: 0.75em;
+}
+
+#rail {
+  width: 224px;
+  float: left;
+}
+
+#main {
+  width: 560px;
+  float: right;
+}
+
+  #main a:hover,
+  #main a:active {
+    color: #d1ba81;
+    background: #763a23;
+  }
+
+#footer {
+  clear: both;
+  background: #1f1406;
+}
+
+#footer .foot_links {
+  margin: 0 auto;
+  width: 600px;
+}
+
+#footer ul {
+  list-style-type: none;
+  margin: 50px 20px 20px 0;
+  width: 130px;
+  float: left;
+  font-size: 0.8em;
+}
+
+#footer ul li.top {
+  margin: 0 0 20px;
+  text-transform: uppercase;
+}
+
+#footer a:link {
+  color: #e3dfd8;
+}
+
+	#footer a:visited {
+  color: #d1ba81;
+}
+
+#footer a:hover,
+#footer a:active {
+  color: #875b43;
+  text-decoration: none;
+}
+
+#footer .foot_bot {
+  padding: 20px 0;
+  clear: both;
+  font-size: 0.65em;
+	color: #b38c60;
+	text-align: center;
+}
+
+#footer .foot_bot span {
+  padding: 0 20px;
+}
+
+#footer_main {
+  display: none;
+}
+
+/* NAVIGATION */
+
+#navbar {
+  padding: 3px 0 0;
+  width: 547px;
+  height: 24px;
+  background: url(/images/2.0/bg_nav.png) no-repeat;
+  font-size: 0.85em;
+  position: absolute;
+  top: 310px;
+  right: 5px;
+}
+
+#navbar ul {
+  list-style-type: none;
+}
+
+#navbar ul li {
+  float: left;
+  display: inline;
+  margin-left: 14px;
+}
+
+#navbar ul li a {
+  display: block;
+  padding: 0 20px;
+  color: #e3dfd8;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a:active,
+#navbar ul li.current a {
+  text-decoration: none;
+  color: #4f291a;
+}
+
+/* -------- 4) INDIVIDUAL PAGE LAYOUTS -------- */
+
+/* HOME
+------- */
+
+#player_area { margin: 0 0 0 10px; border-left: 1px dotted; border-bottom: 1px dotted; padding: 0 0 10px 10px; float: right; display: inline; text-align: right; }
+
+/* PHOTOS
+----------*/
+
+/* ==========================================================================
+  Carousel
+ ========================================================================== */
+ 
+#carousel img { max-width: 100%}
+ 
+#carousel *,
+#carousel *:before,
+#carousel *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+  margin-bottom: 2em;
+  background: #000;
+  text-align: center;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+}
+
+.swipe a.arrow {
+  display: none;
+  position: absolute;
+  top: 45%;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.swipe a.arrow.active {
+  display: block; 
+}
+
+.swipe a.arrow:before {
+  opacity: 0.2;
+  color: #000000; 
+}
+
+.swipe a.arrow.icon-leftarrow {
+  left: 2.5%; 
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-right: 30px solid #FFD800;
+  border-bottom: 15px solid transparent;
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+.swipe a.arrow.icon-rightarrow {
+  right: 2.5%; 
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-left: 30px solid #FFD800;
+  border-bottom: 15px solid transparent;
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+.swipe nav {
+  position: absolute;
+  left: 2.5%;
+  top: 0;
+}
+
+.swipe nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.swipe nav li {
+  float: left;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #383838;
+  margin: 12px 12px 0 0;
+  cursor: pointer;
+  display: block;
+}
+
+.swipe nav li.active {
+  background-color: #ffffff;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #cccccc));
+  background-image: -webkit-linear-gradient(top, white, #cccccc);
+  background-image: -moz-linear-gradient(top, white, #cccccc);
+  background-image: -ms-linear-gradient(top, white, #cccccc);
+  background-image: -o-linear-gradient(top, white, #cccccc);
+  background-image: linear-gradient(top, white, #cccccc); 
+}
+
+.swipe h2.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  padding: 0.5em;
+  margin-bottom: 0;
+  font-size: 0.8125em;
+}
+
+/* CONTACT
+----------*/
+
+.mainform label {
+  margin: 5px 0;
+  display: block;
+  font-weight: bold;
+}
+
+.mainform label span {
+  font-size: 0.75em;
+  font-weight: normal;
+}
+
+.mainform input.error {
+  border-bottom: 1px solid #a33;
+  border-top: 1px solid #a33;
+  border-left: 1px solid #a33;
+  border-right: 1px solid #a33;
+  background: #FFCFD1;
+}
+
+.mainform label.error {
+  color: #c33;
+}
+
+.mainform input {
+  width: 65%;
+  padding: 0.4em;
+}
+
+.mainform textarea {
+  height: 100px;
+  width: 65%;
+}
+
+.mainform .send {
+  margin: 10px 0;
+  font-size: 1.3em;
+  background: #9F4627;
+  color: #2F200C;
+  cursor: pointer;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.mainform .send:hover {
+  background: #2F200C;
+  color: #9F4627;
+}
+
+.page_contact .social_media_links a {
+	padding: 0 15px;
+}
+
+.page_contact .social_media_links a:hover,
+.page_contact .social_media_links a:active {
+	background: none;
+}
+
+/* -------- 5) MODULES -------- */
+
+.mod {
+  margin: 0 0 2em;
+  padding: 10px;
+  width: 204px;
+  height: 166px;
+  background: url(/images/2.0/bg_mod.png) no-repeat;
+}
+
+.cd_mod img {
+  margin: 0 0.5em 0.5em 0;
+  width: 80px;
+  height: 80px;
+  float: left;
+}
+
+.mod h2 {
+  font-size: 1.2em;
+  color: #553418;
+}
+
+.mod h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #553418;
+}
+
+.mod h4 {
+  margin: 0 0 0.2em;
+  font-size: 1.2em;
+  color: #000;
+}
+
+.mod h5 {
+  margin: 0 0 0.2em;
+  font-size: 1.0em;
+  color: #000;
+}
+
+.mod p {
+  font-size: 0.9em;
+}
+
+/* -------- 6) ADMIN STYLES -------- */
+
+.admin_tabs {
+  list-style-type: none;
+  font-size: 1.6em;
+  margin: 0;
+  padding: 0;
+}
+
+.admin_tabs li {
+  padding: 0.5em;
+  margin: 0 0 1em;
+}

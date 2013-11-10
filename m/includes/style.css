@@ -1,0 +1,116 @@
+/*----------------------------------------------------------
+STARTER SITE
+CREATED : 2.19.11
+TABLE OF CONTENTS :
+
+1) CLEAR DEFAULT STYLES
+2) SET SITEWIDE BASE CLASSES AND TAGS
+3) ALL SITE LAYOUT
+4) INDIVIDUAL PAGE LAYOUTS
+
+COLOR SWATCHES :
+----------------------------------------------------------*/
+
+/** -------- 1) CLEAR DEFAULT STYLES -------- **/
+html{margin:0;padding:0}body,div,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,blockquote,table,th,td,a,img,ul,li{margin:0;padding:0;border:none;outline:none;position:relative}ol{list-style-position:inside}p{margin:0 0 0.625em 0;line-height:1.5em}address,caption,cite,code,dfn,th,var{font-style:normal;font-weight:normal}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:none}a img,a:link img,a:visited img,a:hover img,a:active img{border:none;outline:none}caption,th{text-align:left}q:before,q:after{content:''}
+
+/** -------- 2) SET SITEWIDE BASE CLASSES AND TAGS -------- **/
+
+/* TAGS */
+
+h1 {
+font-size: 1.7em;
+margin: 0 0 0.85em;
+}
+h2 {
+font-size: 1.5em;
+margin: 0 0 0.75em;
+}
+h3 {
+font-size: 1.3em;
+margin: 0 0 0.65em;
+}
+h4 {
+font-size: 1.1em;
+margin: 0 0 0.55em;
+}
+h5 {
+font-size: 1.0em;
+margin: 0 0 0.5em;
+}
+h6 {
+font-size: 0.9em;
+margin: 0 0 0.45em;
+}
+
+em {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 3em;
+	line-height: 2.0em;
+	font-style: italic;
+}
+blockquote:before, blockquote:after {
+content: '"';
+}
+
+ul {
+  list-style-type: none;
+	margin: 0.5em 0 1em 0.5em;
+}
+
+li {
+	margin: 0.5em 0;
+}
+
+th {
+	font-weight: bold;
+	background: #ccc;
+}
+
+th, td {
+	padding: 5px;
+	border: 1px solid #333;
+}
+
+/* ALL SLATER SITES COMMON CLASSES */
+.bold{font-weight:bold}.italic{font-style:italic}.strike{text-decoration:line-through}.vtop{vertical-align:top}.middle{vertical-align:middle}.center{text-align:center}.right{text-align:right}.left{text-align:left}.nowrap{white-space:nowrap}.breakforprint{page-break-after:always}.invisible{visibility:hidden}.hidden{display:none}.loading{background:url(../images/icons/loading.gif) 50% 50% no-repeat}.ie6_warning{display:none}.clearboth{display:block;clear:both;line-height:0;height:0;margin:0;padding:0;overflow:hidden;font-size:.01em}.floatleft{float:left}.floatright{float:right}.formrow{margin:5px 0}.divider{margin:3em 0;height:3px;background:url(../images/bg_divider.gif) -3px 0 repeat-x;overflow:hidden}.heading{font-size:14px;font-weight:bold}
+
+/* CUSTOM SITE CLASSES 
+---------------------------*/
+
+/* -------- 3) ALL SITE LAYOUT -------- */
+body {
+	font-size: 0.8em;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	color: #3e3e3e;
+}
+
+.ui-footer {
+  padding: 15px;
+}
+
+/* -------- 4) INDIVIDUAL PAGE LAYOUTS -------- */
+
+/* SHOWS
+--------*/
+
+ul.showlist li {
+	border-bottom: 1px dotted #999;
+	margin: 0 0 2em 1em;
+	padding: 0 0 1em;
+}
+
+/* PHOTOS 
+---------*/
+#gallery div {
+  padding: 10px 0;
+  text-align: center;
+}
+
+#gallery div a {
+  display: block;
+  text-decoration: none;
+}
