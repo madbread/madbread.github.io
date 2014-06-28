@@ -1,4 +1,5 @@
-madbread.github.io
-==================
+# [Original Demo location](http://ihatetomatoes.net/simple-parallax-scrolling-tutorial/)
 
-Dev site for mad bread website
+Templates to use as a starting point for a parallax project.
+
+This is all based on Petr Tichy's Demos on his [blog](http://ihatetomatoes.net).
