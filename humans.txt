@@ -3,11 +3,13 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Mad Bread -- Band -- @madbread
+    Mike Slater -- Webmaster / Bassist -- @slatron
+    Carin Slater -- Designer -- @eyeswideopen
 
 # THANKS
 
-    <name>
+  Everyone at all our shows
 
 # TECHNOLOGY COLOPHON
 

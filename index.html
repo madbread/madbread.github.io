@@ -4,120 +4,106 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Demo - Simple parallax scrolling tutorial</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Mad Bread - Chicago Folk and Bluegrass</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-		<link rel="author" href="https://plus.google.com/u/0/109859280204979591787/about"/>
+	    <link rel="author" href="http://www.madbreadband.com"/>
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/main.css">
+      <script src="js/vendor/modernizr-2.7.1.min.js"></script>
 
-		<!--
-			* This demo was prepared for you by Petr Tichy - Ihatetomatoes.net
-			* Want to see more similar demos and tutorials?
-			* Help by spreading the word about Ihatetomatoes blog.
-			* Facebook - https://www.facebook.com/ihatetomatoesblog
-			* Twitter - https://twitter.com/ihatetomatoes
-			* Google+ - https://plus.google.com/u/0/109859280204979591787/about
-		-->
-
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
-        <style type="text/css">
-			body {
-				font-family: 'Open Sans', sans-serif;
-			}
-		</style>
     </head>
     <body class="loading">
-        <!--[if lt IE 7]>
+        <!--[if lt IE 8]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
        	
        	<div id="preload">
-	       	<img src="img/bcg_slide-1.jpg">
-	       	<img src="img/bcg_slide-2.jpg">
-	       	<img src="img/bcg_slide-3.jpg">
-	       	<img src="img/bcg_slide-4.jpg">
-          <img src="img/bcg_slide-5.jpg">
-          <img src="img/bcg_slide-6.jpg">
+	       	<img src="images/bg/bass.jpg">
+	       	<img src="images/bg/bw.jpg">
+	       	<img src="images/bg/dd-2.jpg">
+          <img src="images/bg/dd-stage.jpg">
+          <img src="images/bg/drum.jpg">
+          <img src="images/bg/fence.jpg">
        	</div>
+
+        <nav class="top-layer">
+          <ul>
+            <li><a href="#">Mad Bread</a></li>
+            <li><a href="#">Shows</a></li>
+            <li><a href="#">Music</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
        	
        	<main>
-       	 
-	        <section id="slide-1" class="slide">
-	        	<div class="bg">
-		        	<div class="slideContainer">
-			    		<div class="slideContent">
-				    		<h2>A string band for the 21st century...</h2>
-			    		</div>
-		        	</div>
-	        	</div>
-		    </section>
-		    
-		    <section id="slide-2" class="slide">
-		    	<div class="bg">
-			    	<div class="slideContainer">
-			    		<div class="slideContent">
-				    		<h2>...Mad Bread plays a unique mixture of bluegrass, rock, folk and blues.</h2>
-			    		</div>
-		        	</div>
-		    	</div>
-		    </section>
-		    
-			<section id="slide-3" class="slide">
-				<div class="bg">
-			    	<div class="slideContainer">
-		    			<div class="slideContent">
-				    		<h2>The band blends traditional instruments with modern songwriting...</h2>
-			    		</div>
-			    	</div>
-			    	
-			    </div>
-			</section>
-			
-			<section id="slide-4" class="slide">
-				<div class="bg">
-			    	<div class="slideContainer">
-		    			<div class="slideContent">
-				    		<h2>...creating innovative, genre-bending music that defies classification.</h2>
-			    		</div>
-			    	</div>
-			    	
-			    </div>
-			</section>
-		    
-      <section id="slide-5" class="slide">
-        <div class="bg">
-            <div class="slideContainer">
-              <div class="slideContent">
-                <h2>At a concert, you'll hear them move effortlessly from boot-stompin' bluegrass jams, to Chicago-style blues-rock...</h2>
-              </div>
+
+          <section>
+            <div id="slide-1" class="bg"
+              data-anchor-target="#slide-1"
+
+              data-top-bottom="transform: translateY(-20%);"
+              data-bottom-top="transform: translateY(20%);"
+            >
+              <img src="images/bg/fence.jpg">
             </div>
-            
-          </div>
-      </section>
+          </section>
 
-      <section id="slide-6" class="slide">
-        <div class="bg">
-            <div class="slideContainer">
-              <div class="slideContent">
-                <h2>...to psychedelic folk ballads with stops everywhere in between.</h2>
-              </div>
+          <aside>
+            <p>At a concert, you'll hear the band move effortlessly from boot-stompin' bluegrass jams, to psychedelic folk ballads, to Chicago-style blues-rock with stops everywhere in between.</p>
+          </aside>
+
+          <section id="slide-2">
+            <div class="bg"
+              data-anchor-target="#slide-2"
+
+              data-top-bottom="transform: translateY(-20%);"
+              data-bottom-top="transform: translateY(20%);"
+            >
+              <img src="images/bg/dd-stage.jpg">
             </div>
-            
-          </div>
-      </section>
+          </section>
 
-		</main>
+          <aside>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque est numquam nihil ipsam enim rerum perspiciatis maxime facere temporibus, qui, labore magnam impedit quo laudantium tempore consectetur velit aut architecto!</p>
+          </aside>
 
+          <section id="slide-3">
+            <div class="bg"
+              data-anchor-target="#slide-3"
+
+              data-top-bottom="transform: translateY(-20%);"
+              data-bottom-top="transform: translateY(20%);"
+            >
+              <img src="images/bg/bw.jpg">
+            </div>
+          </section>
+
+          <aside>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque est numquam nihil ipsam enim rerum perspiciatis maxime facere temporibus, qui, labore magnam impedit quo laudantium tempore consectetur velit aut architecto!</p>
+          </aside>
+
+          <section id="slide-4">
+            <div class="bg"
+              data-anchor-target="#slide-4"
+
+              data-top-bottom="transform: translateY(-20%);"
+              data-bottom-top="transform: translateY(20%);"
+            >
+              <img src="images/bg/dd-2.jpg">
+            </div>
+          </section>
+
+       	</main>
+	 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-        <script src="js/imagesloaded.js"></script>
-        <script src="js/skrollr.js"></script>
+        <script src="js/vendor/imagesloaded.js"></script>
+        <script src="js/vendor/skrollr.js"></script>
         <script src="js/main.js"></script>
 
     </body>
