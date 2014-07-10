@@ -1,0 +1,51 @@
+// Page Slides
+section { 
+  min-height: $section-height;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+
+  .bg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: $section-height;
+    width: 100%;
+  }
+
+}
+
+#slide-1 .bg {
+  background-image: url(../images/bg/fence.jpg);
+}
+
+#slide-2 .bg {
+  background-image: url(../images/bg/dd-stage.jpg);
+}
+
+#slide-3 .bg {
+  background-image: url(../images/bg/bw.jpg);
+}
+
+#slide-4 .bg {
+  background-image: url(../images/bg/dd-2.jpg);
+}
+
+
+aside {
+  position: relative;
+  background-color: $color-tan;
+  margin-top: -$aside-height * 0.5;
+  margin-bottom: -$aside-height * 0.5;
+  min-height: $aside-height;
+  text-align: center;
+  z-index: 100;
+
+  p {
+    padding: 20px;
+    font-size: 20px;
+    line-height: 1.5em;
+
+  }
+}

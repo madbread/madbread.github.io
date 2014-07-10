@@ -21,37 +21,3 @@ main {
   box-shadow: 3px 6px 3px 0px rgba(34,34,34,0.5);
 
 }
-
-
-// Page Sections
-section { 
-  min-height: $section-height;
-  overflow: hidden;
-  position: relative;
-  z-index: 10;
-}
-
-aside {
-  position: relative;
-  background-color: $color-tan-light;
-  margin-top: -40px;
-  margin-bottom: -40px;
-  min-height: $aside-height;
-  text-align: center;
-  z-index: 100;
-
-  p {
-    padding: 20px;
-    font-size: 20px;
-    line-height: 1.5em;
-
-  }
-}
-
-.bg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
