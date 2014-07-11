@@ -17,11 +17,11 @@ section {
 }
 
 #slide-1 .bg {
-  background-image: url(../images/bg/fence.jpg);
+  background-image: url(../images/bg/dd-stage.jpg);
 }
 
 #slide-2 .bg {
-  background-image: url(../images/bg/dd-stage.jpg);
+  background-image: url(../images/bg/dd-2.jpg);
 }
 
 #slide-3 .bg {
@@ -29,23 +29,34 @@ section {
 }
 
 #slide-4 .bg {
-  background-image: url(../images/bg/dd-2.jpg);
+  background-image: url(../images/bg/fence.jpg);
 }
 
 
 aside {
   position: relative;
   background-color: $color-tan;
-  margin-top: -$aside-height * 0.5;
-  margin-bottom: -$aside-height * 0.5;
+  font-size: 13px;
+  font-style: italic;
+  margin-top: -$aside-height;
+  margin-bottom: -$aside-height;
   min-height: $aside-height;
   text-align: center;
   z-index: 100;
 
   p {
-    padding: 20px;
-    font-size: 20px;
+    padding: 20px $banner-width;
     line-height: 1.5em;
 
+  }
+
+  &.last {
+    margin-bottom: -$aside-height / 2;
+  }
+}
+
+@media only screen and (min-width: $breakpoint) {
+  aside {
+    font-size: 15px;
   }
 }

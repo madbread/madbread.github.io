@@ -9,55 +9,6 @@
 
 // Other Modules
 @import 'modules/slides';
-
-nav {
-
-  position: fixed;
-  top: 0;
-  text-align: center;
-  width: 100%;
-  min-height: $nav-height;
-
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    color: $color-black;
-    min-height: $nav-height;
-    margin: 0;
-    padding: 0;
-    float: left;
-    width: 25%;
-
-    &:nth-child(1) {
-      background-color: $color-brown-dark;
-    }
-
-    &:nth-child(2) {
-      background-color: $color-brown;
-    }
-
-    &:nth-child(3) {
-      background-color: $color-tan;
-    }
-
-    &:nth-child(4) {
-      background-color: $color-tan-light;
-    }
-  }
-
-  a {
-    color: $color-black;
-    display: block;
-    text-decoration: none;
-    padding: $base-unit-half;
-  }
-
-}
-
-
+@import 'modules/nav';
+@import 'modules/banner';
 

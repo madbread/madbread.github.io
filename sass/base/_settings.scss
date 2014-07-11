@@ -1,6 +1,7 @@
 // place all sass settings here
 
 // Site Colors
+$color-black-solid: #000000;
 $color-black: #222222;
 $color-white: #ffffff;
 $color-tan-light: #f0e0c8;
@@ -14,10 +15,16 @@ $base-font-family: 'Open Sans', sans-serif;
 
 // Common Layout Heights
 $nav-height: 30px;
-$section-height: 600px;
-$aside-height: $section-height * .25;
+$section-height: 800px;
+$aside-height: $section-height / 6;
+
+$banner-width: 35%;
+
 
 //Used for generig paddings / margins
 $base-unit: 1em;
 $base-unit-half: $base-unit * 0.5;
 $base-unit-quarter: $base-unit * 0.25;
+
+// You get one breakpoint
+$breakpoint: 600px;
