@@ -1,0 +1,24 @@
+#social {
+
+  position: fixed;
+  left: -60%;
+  z-index: 1000;
+  opacity: 0.85;
+  padding-top: $nav-height * 1.25;
+  width: $social-area-width;
+
+  -webkit-transition: left 500ms ease;
+  -moz-transition: left 500ms ease;
+  -o-transition: left 500ms ease;
+  transition: left 0.5s ease;
+
+  &.active {
+    left: 10px;
+  }
+ 
+  img {
+    max-width: 100%;
+    padding-bottom: 3px;
+  }
+
+}

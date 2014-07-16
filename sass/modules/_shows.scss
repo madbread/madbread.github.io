@@ -1,0 +1,23 @@
+#shows {
+  background-color: white;
+  overflow: hidden;
+  position: fixed;
+  top: -$shows-height;
+  text-align: center;
+  width: 100%;
+  height: $shows-height;
+  z-index: 10000;
+
+  -webkit-transition: top 500ms ease;
+  -moz-transition: top 500ms ease;
+  -o-transition: top 500ms ease;
+  transition: top 0.5s ease;
+
+  &.active {
+    top: $nav-height;
+    -webkit-box-shadow: 3px 6px 3px 0px rgba(34,34,34,0.5);
+    -moz-box-shadow: 3px 6px 3px 0px rgba(34,34,34,0.5);
+    box-shadow: 3px 6px 3px 0px rgba(34,34,34,0.5);
+  }
+
+}

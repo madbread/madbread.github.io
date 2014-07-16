@@ -16,12 +16,15 @@ $base-font-family: 'Open Sans', sans-serif;
 // Common Layout Heights
 $nav-height: 30px;
 $section-height: 800px;
-$aside-height: $section-height / 6;
+$aside-height: 120px;
+$shows-height: 100px;
 
+// Other 
 $banner-width: 35%;
+$social-area-width: 28px;
 
 
-//Used for generig paddings / margins
+//Used for generating paddings / margins
 $base-unit: 1em;
 $base-unit-half: $base-unit * 0.5;
 $base-unit-quarter: $base-unit * 0.25;

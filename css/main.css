@@ -28,9 +28,9 @@ aside {
 .loaded aside,
 .no-js aside {
   opacity: 1;
-  -webkit-transition: opacity 300ms ease-out;
-  -moz-transition: opacity 300ms ease-out;
-  transition: opacity 300ms ease-out; }
+  -webkit-transition: opacity 600ms ease-out;
+  -moz-transition: opacity 600ms ease-out;
+  transition: opacity 600ms ease-out; }
 
 #preload {
   width: 1px;
@@ -57,7 +57,7 @@ section {
   background-image: url(../images/bg/dd-stage.jpg); }
 
 #slide-2 .bg {
-  background-image: url(../images/bg/dd-2.jpg); }
+  background-image: url(../images/bg/adam.jpg); }
 
 #slide-3 .bg {
   background-image: url(../images/bg/bw.jpg); }
@@ -68,18 +68,19 @@ section {
 aside {
   position: relative;
   background-color: #b49476;
+  border-top: 3px solid #222222;
+  border-bottom: 3px solid #222222;
   font-size: 13px;
   font-style: italic;
-  margin-top: -133.33333px;
-  margin-bottom: -133.33333px;
-  min-height: 133.33333px;
+  margin-top: -120px;
+  margin-bottom: -60px;
+  min-height: 120px;
+  padding: 10px 0;
   text-align: center;
   z-index: 100; }
   aside p {
-    padding: 20px 35%;
+    padding: 0 17.5%;
     line-height: 1.5em; }
-  aside.last {
-    margin-bottom: -66.66667px; }
 
 @media only screen and (min-width: 600px) {
   aside {
@@ -127,21 +128,55 @@ nav {
     padding: 0.5em; }
 
 #banner {
+  position: fixed;
+  right: -60%;
+  z-index: 1000;
   opacity: 0.75;
-  padding-top: 60px;
-  width: 70%; }
+  padding-top: 45px;
+  width: 52.5%;
+  -webkit-transition: right 500ms ease;
+  -moz-transition: right 500ms ease;
+  -o-transition: right 500ms ease;
+  transition: right 0.5s ease; }
+  #banner.active {
+    right: -40px; }
   #banner img {
     max-width: 100%; }
 
 @media only screen and (min-width: 600px) {
   #banner {
-    position: fixed;
     right: -50%;
-    width: 35%;
-    z-index: 1000;
-    -webkit-transition: right 500ms ease;
-    -moz-transition: right 500ms ease;
-    -o-transition: right 500ms ease;
-    transition: right 0.5s ease; }
-    #banner.active {
-      right: -40px; } }
+    width: 35%; } }
+#social {
+  position: fixed;
+  left: -60%;
+  z-index: 1000;
+  opacity: 0.85;
+  padding-top: 37.5px;
+  width: 28px;
+  -webkit-transition: left 500ms ease;
+  -moz-transition: left 500ms ease;
+  -o-transition: left 500ms ease;
+  transition: left 0.5s ease; }
+  #social.active {
+    left: 10px; }
+  #social img {
+    max-width: 100%;
+    padding-bottom: 3px; }
+
+#player {
+  position: fixed;
+  right: -300px;
+  top: 140px;
+  z-index: 1000;
+  width: 300px;
+  -webkit-transition: right 500ms ease;
+  -moz-transition: right 500ms ease;
+  -o-transition: right 500ms ease;
+  transition: right 0.5s ease; }
+  #player.active {
+    right: -5px; }
+
+@media only screen and (min-width: 600px) {
+  #player {
+    right: -50%; } }

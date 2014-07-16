@@ -1,11 +1,9 @@
-#banner {
-
+#player {
   position: fixed;
-  right: -60%;
+  right: -300px;
+  top: 140px;
   z-index: 1000;
-  opacity: 0.75;
-  padding-top: $nav-height * 1.5;
-  width: $banner-width * 1.5;
+  width: 300px;
 
   -webkit-transition: right 500ms ease;
   -moz-transition: right 500ms ease;
@@ -13,20 +11,14 @@
   transition: right 0.5s ease;
 
   &.active {
-    right: -40px;
-  }
- 
-  img {
-    max-width: 100%;
+    right: -5px;
   }
 
 }
 
 @media only screen and (min-width: $breakpoint) {
 
-  #banner {
+  #player {
     right: -50%;
-    width: $banner-width;
   }
-
-} 
+}

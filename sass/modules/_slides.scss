@@ -21,7 +21,7 @@ section {
 }
 
 #slide-2 .bg {
-  background-image: url(../images/bg/dd-2.jpg);
+  background-image: url(../images/bg/adam.jpg);
 }
 
 #slide-3 .bg {
@@ -36,22 +36,20 @@ section {
 aside {
   position: relative;
   background-color: $color-tan;
+  border-top: 3px solid $color-black;
+  border-bottom: 3px solid $color-black;
   font-size: 13px;
   font-style: italic;
   margin-top: -$aside-height;
-  margin-bottom: -$aside-height;
+  margin-bottom: -$aside-height / 2;
   min-height: $aside-height;
+  padding: 10px 0;
   text-align: center;
   z-index: 100;
 
   p {
-    padding: 20px $banner-width;
+    padding: 0 $banner-width / 2;
     line-height: 1.5em;
-
-  }
-
-  &.last {
-    margin-bottom: -$aside-height / 2;
   }
 }
 
