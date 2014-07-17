@@ -180,3 +180,6 @@ nav {
 @media only screen and (min-width: 600px) {
   #player {
     right: -50%; } }
+#contact-form {
+  height: 300px;
+  width: 300px; }

@@ -2,12 +2,12 @@
 ( function($) {
 	
 	// Setup variables
-	$body = $('body');
-  $nav = $body.find('nav');
+	$body   = $('body');
+  $nav    = $body.find('nav');
   $banner = $body.find('#banner');
   $social = $body.find('#social');
   $player = $body.find('#player');
-  $shows = $body.find('#shows');
+  $shows  = $body.find('#shows');
 	
   //Load Images 
 	$body.imagesLoaded( function() {
