@@ -1,10 +1,12 @@
 #booking {
 
   background: $color-tan;
+  border: 3px solid $color-brown;
+  padding: $base-unit;
 
   position: fixed;
   right: -300px;
-  bottom: 50px;
+  top: $nav-height + 100px;
   z-index: 100;
   width: 300px;
 
@@ -12,6 +14,10 @@
   -moz-transition: right 500ms ease;
   -o-transition: right 500ms ease;
   transition: right 0.5s ease;
+
+  border-radius: 10px 0px 0px 10px;
+  -moz-border-radius: 10px 0px 0px 10px;
+  -webkit-border-radius: 10px 0px 0px 10px;
 
   &.active {
     right: -5px;
@@ -24,5 +30,6 @@
   #booking {
     right: -50%;
     width: 50%;
+    top: $nav-height + 250px;
   }
 }

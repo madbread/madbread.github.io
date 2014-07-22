@@ -33,6 +33,7 @@
   $('.show-player').on('click', function(e) {
     e.preventDefault();
     $player.toggleClass('active');
+    $booking.removeClass('active');
   });
 
   // show trigger
@@ -49,6 +50,7 @@
       if(dir === 'down') {
         $booking.addClass('active');
         $player.removeClass('active');
+        $shows.removeClass('active');
       } else {
         $booking.removeClass('active');
       }
