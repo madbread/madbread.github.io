@@ -1,0 +1,28 @@
+#booking {
+
+  background: $color-tan;
+
+  position: fixed;
+  right: -300px;
+  bottom: 50px;
+  z-index: 100;
+  width: 300px;
+
+  -webkit-transition: right 500ms ease;
+  -moz-transition: right 500ms ease;
+  -o-transition: right 500ms ease;
+  transition: right 0.5s ease;
+
+  &.active {
+    right: -5px;
+  }
+
+}
+
+@media only screen and (min-width: $breakpoint) {
+
+  #booking {
+    right: -50%;
+    width: 50%;
+  }
+}

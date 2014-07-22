@@ -180,6 +180,24 @@ nav {
 @media only screen and (min-width: 600px) {
   #player {
     right: -50%; } }
+#booking {
+  background: #b49476;
+  position: fixed;
+  right: -300px;
+  bottom: 50px;
+  z-index: 100;
+  width: 300px;
+  -webkit-transition: right 500ms ease;
+  -moz-transition: right 500ms ease;
+  -o-transition: right 500ms ease;
+  transition: right 0.5s ease; }
+  #booking.active {
+    right: -5px; }
+
+@media only screen and (min-width: 600px) {
+  #booking {
+    right: -50%;
+    width: 50%; } }
 #contact-form {
   height: 300px;
   width: 300px; }
