@@ -1,13 +1,12 @@
 #shows {
-  background-color: white;
+  background-color: $color-brown;
   overflow: hidden;
   position: fixed;
   height: $shows-height;
   top: -$shows-height;
   text-align: center;
   width: 100%;
-  height: $shows-height;
-  z-index: 10000;
+  z-index: 1000;
 
   -webkit-transition: top 500ms ease;
   -moz-transition: top 500ms ease;
@@ -16,6 +15,7 @@
 
   .show {
     float: left;
+    padding: $base-unit;
     width: 25%;
 
     h2 {
@@ -24,7 +24,7 @@
       margin: 0;
     }
 
-    p {
+    p, a {
       font-size: 12px;
       padding: 0;
       margin: 0;
@@ -39,3 +39,13 @@
   }
 
 }
+
+
+@media only screen and (min-width: $breakpoint) {
+
+  #shows {
+    height: $shows-height-fullscreen;
+    top: -$shows-height-fullscreen;
+  }
+}
+
