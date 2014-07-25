@@ -83,24 +83,24 @@ jQuery.noConflict();
       };
 
   //Load Images 
-	$body.imagesLoaded( function() {
-		setTimeout(function() {
+	// $body.imagesLoaded( function() {
+	// 	setTimeout(function() {
 	      
-	    // Init Skrollr
-	    var s = skrollr.init({
-              forceHeight: false
-            });
+	//     // Init Skrollr
+	//     var s = skrollr.init({
+ //              forceHeight: false
+ //            });
 	      
-	    // Fade in sections
-		  $body.removeClass('loading').addClass('loaded');
+	//     // Fade in sections
+	// 	  $body.removeClass('loading').addClass('loaded');
 
-      setTimeout(function() { $nav.addClass('active'); }, 500);
-      setTimeout(function() { $banner.addClass('active'); }, 700);
-      setTimeout(function() { $social.addClass('active'); }, 800);
-      setTimeout(function() { animationComplete = true; }, 801);
+ //      setTimeout(function() { $nav.addClass('active'); }, 500);
+ //      setTimeout(function() { $banner.addClass('active'); }, 700);
+ //      setTimeout(function() { $social.addClass('active'); }, 800);
+ //      setTimeout(function() { animationComplete = true; }, 801);
 
-		}, 400);
-	});
+	// 	}, 400);
+	// });
 
   // Player trigger
   $('.show-player').on('click', function(e) {
