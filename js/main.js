@@ -157,14 +157,13 @@ jQuery.noConflict();
     'url'     : 'shows.json',
     'dataType': 'json',
     'success' : function(data) {
-      loadShows(data.shows);
+
+      if (data.shows.length > 0) {
+        loadShows(data.shows);
+      } else {
+        console.log('No Upcoming Shows');
+      }
     }
   })
-
-  if (showdata.length > 0) {
-    loadShows(showdata);
-  } else {
-    console.log('No Upcoming Shows');
-  }
 
 })(jQuery);
