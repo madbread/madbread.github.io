@@ -158,6 +158,8 @@ jQuery.noConflict();
     'dataType': 'json',
     'success' : function(data) {
 
+      console.log('data', data);
+
       loadShows(data.shows);
     }
   })
