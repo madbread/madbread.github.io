@@ -14,9 +14,30 @@
     right: -5px;
   }
 
+  .albums {
+    margin-right: $base-unit;
+    text-align: right;
+  }
+
+  h4 { 
+    background: $color-black;
+    color: $color-tan-light;
+    display: inline-block;
+    font-size: $base-font-size - 3px;
+    margin: 0 0 $base-unit-quarter;
+    padding: $base-unit-quarter;
+
+    @include border-radius(3px);
+  }
+
+  img {
+    width: 60px;
+    height: 60px;
+  }
+
 }
 
-@media only screen and (min-width: $breakpoint) {
+@media only screen and (min-width: $breakpoint-large) {
 
   #player {
     right: -50%;

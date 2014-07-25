@@ -17,18 +17,18 @@ $base-font-family: 'Open Sans', sans-serif;
 $nav-height: 30px;
 $section-height: 800px;
 $aside-height: 120px;
-$shows-height: 150px;
-$shows-height-fullscreen: 110px;
+$shows-height: 110px;
+$shows-height-fullscreen: 100px;
 
 // Other 
 $banner-width: 35%;
 $social-area-width: 28px;
-
 
 //Used for generating paddings / margins
 $base-unit: 1em;
 $base-unit-half: $base-unit * 0.5;
 $base-unit-quarter: $base-unit * 0.25;
 
-// You get one breakpoint
-$breakpoint: 600px;
+// You get two breakpoints
+$breakpoint-med: 480px;
+$breakpoint-large: 760px;

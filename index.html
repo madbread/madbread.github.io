@@ -33,8 +33,8 @@
       <ul>
         <li><a class="show-shows" href="#">Shows</a></li>
         <li><a class="show-player" href="#">Music</a></li>
-        <li><a class="fancybox" href="#contact-form">Contact</a></li>
-        <li><a href="#booking-link">Booking</a></li>
+        <li><a class="show-contact fancybox" href="#contact-form">Contact</a></li>
+        <li><a class="show-booking" href="#">Booking</a></li>
       </ul>
     </nav>
    	
@@ -57,22 +57,22 @@
       </div>
 
       <div id="player">
+
         <iframe width="100%" height="250" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1726003&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-      </div>
+        <div class="albums">
+          <h4>Download albums tracks free:</h4>
+          <br>
+          <a href="https://soundcloud.com/madbread/sets/southport-and-eddy-full" target="_blank">
+            <img src="images/sne.jpg" alt="MAD BREAD: Southport and Eddy">
+          </a>
 
-      <div id="shows">
-        <div class="show">
-          <h2>Underground Wonder Bar</h2>
-          <p>Fri, Aug 8 - 2014 | 8:00PM</p>
-          <a href="#">Click for info</a>
-        </div>
-
-        <div class="show">
-          <h2>Underground Wonder Bar</h2>
-          <p>Fri, Aug 8 - 2014 | 8:00PM</p>
-          <a href="#">Click for info</a>
+          <a href="https://soundcloud.com/madbread/sets/tune-back-in-full-album" target="_blank">
+            <img src="images/tbe.jpg" alt="MAD BREAD: Tune Back In">
+          </a>
         </div>
       </div>
+
+      <div id="shows"></div>
 
       <div id="booking">
         <p>To book Mad Bread:</p>
@@ -83,8 +83,8 @@
       <a id="nav-madbread" class="nav-anchor" name="nav-madbread"></a>
       <section id="slide-1">
         <div class="bg"
-          data-top-bottom="background-position: 0px -50px;"
-          data-center="background-position: -100px 0px;"
+          data-top-bottom="background-position: 0px -25px;"
+          data-center="background-position: -50px 0px;"
         >
         </div>
       </section>
@@ -101,8 +101,8 @@
 
       <section id="slide-2">
         <div class="bg"
-          data-top-bottom="background-position: -25px -50px;"
-          data-bottom-top="background-position: 25px 50px;" 
+          data-top-bottom="background-position: -15px -25px;"
+          data-bottom-top="background-position: 15px 25px;" 
         >
         </div>
       </section>
@@ -120,8 +120,8 @@
 
       <section id="slide-3">
         <div class="bg"
-          data-bottom-top="background-position: -250px -20px;" 
-          data-top-bottom="background-position: -150px 20px;"
+          data-bottom-top="background-position: -125px -10px;" 
+          data-top-bottom="background-position: -75px 10px;"
         >
         </div>
       </section>
@@ -140,20 +140,22 @@
       <section id="slide-4">
         <div id="booking-link" class="bg"
           data-center="background-position: 0px 0px;"
-          data-bottom-top="background-position: 0px 100px;" 
+          data-bottom-top="background-position: 0px 50px;" 
         >
         </div>
       </section>
 
    	</main>
 
-    <div class="hidden">
+    <div id="lightboxen" class="hidden">
+
       <div id="contact-form">
         <div id="wufoo-ze4dvbl0aeoygt">
         Fill out my <a href="https://madbread.wufoo.com/forms/ze4dvbl0aeoygt">online form</a>.
         </div>
        <script type="text/javascript" src="js/contact-form.js"></script>
       </div>
+
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

@@ -1,0 +1,16 @@
+body {
+
+  .fancybox-overlay {
+    z-index: 100000;
+  }
+
+  .fancybox-skin { 
+    background: $color-tan;
+    border: 3px solid $color-brown;
+    color: $color-black-solid;
+    font-size: $base-font-size - 2px;
+    padding: $base-unit-half;
+  }
+
+}
+

@@ -1,15 +1,87 @@
+jQuery.noConflict();
 
 ( function($) {
 	
 	// Setup variables
-	$body     = $('body');
-  $nav      = $body.find('nav');
-  $banner   = $body.find('#banner');
-  $social   = $body.find('#social');
-  $player   = $body.find('#player');
-  $shows    = $body.find('#shows');
-  $booking  = $body.find('#booking');
-	
+	var $body       = $('body'),
+      $nav        = $body.find('nav'),
+      $banner     = $body.find('#banner'),
+      $social     = $body.find('#social'),
+      $player     = $body.find('#player'),
+      $shows      = $body.find('#shows'),
+      $booking    = $body.find('#booking'),
+      $lightboxen = $body.find('#lightboxen'),
+
+      shows = [],
+      showsLoaded = false,
+      animationComplete = false,
+
+      matchHeights = function($obj) {
+
+        $obj.removeAttr('style');
+        
+        var maxHeight = 0;
+
+        $obj.each(function() {
+          var $this = $(this),
+              curHeight = $this.outerHeight();
+
+          if(curHeight > maxHeight) {
+            maxHeight = curHeight
+          }
+
+        });
+
+        $obj.height(maxHeight);
+
+      },
+
+      loadShows = function(data) {
+
+        // Create containers for less direct DOM appending 
+        var $allShows       = $("<div></div>"),
+            $allShowDetails = $("<div></div>");
+
+        shows = data;
+
+        $shows.empty();
+
+        for(var i = 0;i < shows.length;i++) {
+
+          // Only show next four upcoming shows
+          if(i >= 4) continue; 
+
+          var showObj        = shows[i],
+              $newShow       = $('<a href="#show' + (i + 1) + '" class="show fancybox"></a>'),
+              $newShowDetail = $('<div class="show-detail" id="show' + (i + 1) + '"></div>');
+
+          // Generate Show Menu Links
+          $newShow.append("<h2>" + showObj.venue + "</h2>");
+          $newShow.append("<p>" + showObj.date + " | " + showObj.time + "</p>");
+
+          $allShows.append($newShow);
+
+          // Generate show detail lightboxen
+          $newShowDetail.append("<h2>" + showObj.venue + "</h2>");
+          $newShowDetail.append("<h3>" + showObj.date + " | " + showObj.time + "</h3>");
+          $newShowDetail.append("<h4>" + showObj.subtitle + "</h4>");
+          $newShowDetail.append("<p>" + showObj.description + "</p>");
+          $newShowDetail.append('<a href="' + showObj.maplink + '" target="_blank">' + showObj.address + ' - click for map</a>');
+          $newShowDetail.append('<a href="' + showObj.website + '" target="_blank">' + showObj.website + '</a>');
+
+          $allShowDetails.append($newShowDetail);
+
+        };
+
+        $shows.append($allShows);
+        $lightboxen.append($allShowDetails);
+
+        matchHeights($shows.find('.show'));
+
+        showsLoaded = true;
+
+      };
+
   //Load Images 
 	$body.imagesLoaded( function() {
 		setTimeout(function() {
@@ -22,11 +94,12 @@
 	    // Fade in sections
 		  $body.removeClass('loading').addClass('loaded');
 
-      setTimeout(function() { $nav.addClass('active'); }, 1000);
-      setTimeout(function() { $banner.addClass('active'); }, 1400);
-      setTimeout(function() { $social.addClass('active'); }, 1600);
-		  
-		}, 800);
+      setTimeout(function() { $nav.addClass('active'); }, 500);
+      setTimeout(function() { $banner.addClass('active'); }, 700);
+      setTimeout(function() { $social.addClass('active'); }, 800);
+      setTimeout(function() { animationComplete = true; }, 801);
+
+		}, 400);
 	});
 
   // Player trigger
@@ -36,15 +109,26 @@
     $booking.removeClass('active');
   });
 
-  // show trigger
+  // Show menu trigger
   $('.show-shows').on('click', function(e) {
     e.preventDefault();
-    $shows.toggleClass('active');
-    $social.toggleClass('active');
-    $banner.toggleClass('active');
+    showsLoaded && animationComplete ?
+      $shows.add($social).add($banner).toggleClass('active') : null;
   });
 
-  // show booking info
+  // Booking info trigger
+  $('.show-booking').on('click', function(e) {
+    e.preventDefault();
+    $booking.toggleClass('active');
+    $player.removeClass('active');
+  });
+
+  // Remove default scroll from contact link
+  $('.show-contact').on('click', function(e) {
+    e.preventDefault();
+  });
+
+  // show booking info on scroll to bottom
   $('#slide-4').waypoint({
     handler: function(dir) {
       if(dir === 'down') {
@@ -57,7 +141,30 @@
     }
   });
 
+  // Resize show buttons on window resize
+  window.onresize = function() {
+    if(animationComplete && showsLoaded) {
+      matchHeights($shows.find('.show'));
+    }
+  }
+
   $(".fancybox").fancybox();
 
-		
+  // ==============================================
+  // Initial ajax call for json data
+  // ==============================================
+  $.ajax({
+    'url'     : 'shows.json',
+    'dataType': 'json',
+    'success' : function(data) {
+      loadShows(data.shows);
+    }
+  })
+
+  if (showdata.length > 0) {
+    loadShows(showdata);
+  } else {
+    console.log('No Upcoming Shows');
+  }
+
 })(jQuery);

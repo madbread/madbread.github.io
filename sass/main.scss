@@ -1,4 +1,5 @@
 @import 'base/settings';
+@import 'base/mixins';
 
 // Main Layout Defualt CSS
 @import 'base/layout';
@@ -15,4 +16,6 @@
 @import 'modules/player';
 @import 'modules/booking';
 @import 'modules/contact-form';
+@import 'modules/show-detail';
+@import 'modules/fancybox-overrides';
 

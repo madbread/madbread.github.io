@@ -14,21 +14,40 @@
   transition: top 0.5s ease;
 
   .show {
+    background-color: $color-tan-light;
+    color: $color-black;
+    cursor: pointer;
+    display: block;
     float: left;
-    padding: $base-unit;
-    width: 25%;
+    margin: 1%;
+    padding: $base-unit $base-unit-quarter;
+    text-decoration: none;
+    width: 23%;
 
-    h2 {
-      font-size: 14px;
-      padding: 0;
-      margin: 0;
-    }
+    -webkit-transition: background-color 500ms ease;
+    -moz-transition: background-color 500ms ease;
+    -o-transition: background-color 500ms ease;
+    transition: background-color 0.5s ease;
 
-    p, a {
-      font-size: 12px;
-      padding: 0;
-      margin: 0;
+    @include border-radius(5px);
+
+    &:hover {
+      background-color: $color-tan;
     }
+  }
+
+  h2 {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 0;
+    margin: 0;
+  }
+
+  p, a {
+    font-size: 11px;
+    line-height: 12px;
+    padding: 0;
+    margin: 0;
   }
 
   &.active {
@@ -41,11 +60,23 @@
 }
 
 
-@media only screen and (min-width: $breakpoint) {
+@media only screen and (min-width: $breakpoint-large) {
 
   #shows {
     height: $shows-height-fullscreen;
     top: -$shows-height-fullscreen;
+ 
+    h2 {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    p, a {
+      font-size: 13px;
+      line-height: 15px;
+    }
+
   }
+
 }
 

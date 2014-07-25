@@ -53,7 +53,7 @@ aside {
   }
 }
 
-@media only screen and (min-width: $breakpoint) {
+@media only screen and (min-width: $breakpoint-large) {
   aside {
     font-size: 15px;
   }
