@@ -158,11 +158,7 @@ jQuery.noConflict();
     'dataType': 'json',
     'success' : function(data) {
 
-      if (data.shows.length > 0) {
-        loadShows(data.shows);
-      } else {
-        console.log('No Upcoming Shows');
-      }
+      loadShows(data.shows);
     }
   })
 
