@@ -291,6 +291,8 @@ nav {
 
 body .fancybox-overlay {
   z-index: 100000; }
+body .fancybox-opened {
+  z-index: 100001; }
 body .fancybox-skin {
   background: #b49476;
   border: 3px solid #8a5f36;
