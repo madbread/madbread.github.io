@@ -145,6 +145,8 @@ jQuery.noConflict();
     $player.toggleClass('active');
     $booking.removeClass('active');
     $shows.removeClass('active');
+    $social.addClass('active');
+    $banner.addClass('active');
   });
 
   // Show menu trigger
@@ -160,6 +162,8 @@ jQuery.noConflict();
     $booking.toggleClass('active');
     $player.removeClass('active');
     $shows.removeClass('active');
+    $social.addClass('active');
+    $banner.addClass('active');
   });
 
   // Remove default scroll from contact link
@@ -168,6 +172,8 @@ jQuery.noConflict();
     $booking.removeClass('active');
     $shows.removeClass('active');
     $player.removeClass('active');
+    $social.addClass('active');
+    $banner.addClass('active');
   });
 
   // show booking info on scroll to bottom
