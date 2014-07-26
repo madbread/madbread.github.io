@@ -4,6 +4,7 @@ jQuery.noConflict();
   
   // Setup variables
   var $body       = $('body'),
+      $window     = $(window),
       $nav        = $body.find('nav'),
       $banner     = $body.find('#banner'),
       $social     = $body.find('#social'),
@@ -80,16 +81,52 @@ jQuery.noConflict();
 
         showsLoaded = true;
 
+      },
+
+      initSkrollr = function(){
+    
+        // Get window size
+        var winW = $window.width();
+        
+        console.log(winW);
+
+        // Init Skrollr for 768 and up
+        if( winW >= 760) {
+
+          console.log('init Skrollr');
+
+          // Init Skrollr
+          var s = skrollr.init({
+              forceHeight: false
+          });
+
+        } else {
+
+          console.log('destroy Skrollr');
+
+          // Init Skrollr
+          var s = skrollr.init();
+          s.destroy();
+        }
+      },
+
+      initAdjustWindow = function() {
+
+        return {
+          match : function() {
+            initSkrollr();
+          },
+          unmatch : function() {
+            initSkrollr();
+          }
+        };
       };
 
   //Load Images 
   $body.imagesLoaded( function() {
     setTimeout(function() {
         
-      // Init Skrollr
-      var s = skrollr.init({
-              forceHeight: false
-            });
+      initSkrollr();
         
       // Fade in sections
       $body.removeClass('loading').addClass('loaded');
@@ -107,6 +144,7 @@ jQuery.noConflict();
     e.preventDefault();
     $player.toggleClass('active');
     $booking.removeClass('active');
+    $shows.removeClass('active');
   });
 
   // Show menu trigger
@@ -121,11 +159,15 @@ jQuery.noConflict();
     e.preventDefault();
     $booking.toggleClass('active');
     $player.removeClass('active');
+    $shows.removeClass('active');
   });
 
   // Remove default scroll from contact link
   $('.show-contact').on('click', function(e) {
     e.preventDefault();
+    $booking.removeClass('active');
+    $shows.removeClass('active');
+    $player.removeClass('active');
   });
 
   // show booking info on scroll to bottom
@@ -211,4 +253,7 @@ jQuery.noConflict();
     console.log('No Upcoming Shows');
   }
 
+  enquire.register("screen and (min-width : 760px)", initAdjustWindow(), false);
+
 })(jQuery);
+
