@@ -55,11 +55,14 @@ nav {
   a {
     color: $color-black;
     display: block;
+    text-align: center;
     text-decoration: none;
     padding: 8px 0 0;
 
     img {
+      display: block;
       height: 25px;
+      margin: 0 auto;
     }
   }
 
