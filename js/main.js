@@ -88,12 +88,8 @@ jQuery.noConflict();
         // Get window size
         var winW = $window.width();
         
-        console.log(winW);
-
         // Init Skrollr for 768 and up
         if( winW >= 760) {
-
-          console.log('init Skrollr');
 
           // Init Skrollr
           var s = skrollr.init({
@@ -102,7 +98,6 @@ jQuery.noConflict();
 
         } else {
 
-          console.log('destroy Skrollr');
 
           // Init Skrollr
           var s = skrollr.init();
@@ -209,7 +204,6 @@ jQuery.noConflict();
         loadShows(data.shows);
       } else {
         // TODO - Handle cases with no shows in shows.json
-        console.log('No Upcoming Shows');
       }
     }
   })

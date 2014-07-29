@@ -16,6 +16,13 @@ section {
 
 }
 
+.prompt-arrow {
+  color: $color-tan-light;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
 #slide-1 .bg {
   background-image: url(../images/bg/dd-stage.jpg);
 }
@@ -39,12 +46,12 @@ aside {
   background-color: $color-tan;
   border-top: 3px solid $color-black;
   border-bottom: 3px solid $color-black;
-  font-size: 13px;
+  font-size: $base-font-size;
   font-style: italic;
   margin-top: -$aside-height;
   margin-bottom: -$aside-height / 2;
   min-height: $aside-height;
-  padding: 10px 0;
+  padding: 30px 0;
   text-align: center;
   z-index: 100;
 
@@ -54,8 +61,16 @@ aside {
   }
 }
 
+@media only screen and (min-width: $breakpoint-med) {
+  aside {
+    font-size: $base-font-size + 3px;
+    padding: 35px 0;
+  }
+}
+
 @media only screen and (min-width: $breakpoint-large) {
   aside {
-    font-size: 15px;
+    font-size: $base-font-size + 6px;
+    padding: 40px 0;
   }
 }
