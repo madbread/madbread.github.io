@@ -1,11 +1,7 @@
 jQuery.noConflict();
 
 ( function($) {
-
-  if (Modernizr.mq('only all and (max-width: 480px)') || (Modernizr.touch)) {
-    window.location = 'http://www.madbreadband.com/old/';
-  };
-
+	
 	// Setup variables
 	var $body       = $('body'),
       $window     = $(window),
@@ -89,11 +85,36 @@ jQuery.noConflict();
 
       initSkrollr = function(){
     
-        // Init Skrollr
-        var s = skrollr.init({
-            forceHeight: false
-        });
+        // Get window size
+        var winW = $window.width();
+        
+        // Init Skrollr for 768 and up
+        if( winW >= 760) {
 
+          // Init Skrollr
+          var s = skrollr.init({
+              forceHeight: false
+          });
+
+        } else {
+
+
+          // Init Skrollr
+          var s = skrollr.init();
+          s.destroy();
+        }
+      },
+
+      initAdjustWindow = function() {
+
+        return {
+          match : function() {
+            initSkrollr();
+          },
+          unmatch : function() {
+            initSkrollr();
+          }
+        };
       };
 
   //Load Images 
@@ -186,5 +207,7 @@ jQuery.noConflict();
       }
     }
   })
+
+  enquire.register("screen and (min-width : 760px)", initAdjustWindow(), false);
 
 })(jQuery);
