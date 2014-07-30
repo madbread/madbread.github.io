@@ -98,11 +98,19 @@ jQuery.noConflict();
 
         } else {
 
-
           // Init Skrollr
           var s = skrollr.init();
           s.destroy();
         }
+
+        // Check for touch
+        if(Modernizr.touch) {
+     
+            // Init Skrollr
+            var s = skrollr.init();
+            s.destroy();
+        }
+        
       },
 
       initAdjustWindow = function() {
