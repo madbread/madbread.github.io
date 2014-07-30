@@ -85,13 +85,16 @@ jQuery.noConflict();
 
       initSkrollr = function(){
     
+        // Init Skrollr
+        var s = skrollr.init({
+          forceHeight: false
+        });
+
         // Check for touch
-        if(!Modernizr.touch) {
+        if(Modernizr.touch) {
      
-          // Init Skrollr
-          var s = skrollr.init({
-            forceHeight: false
-          });
+          var s = skrollr.init();
+          s.destroy();
         }
 
       };
@@ -100,7 +103,7 @@ jQuery.noConflict();
 	$body.imagesLoaded( function() {
 		setTimeout(function() {
 	      
-      if (Modernizr.mq('only all and (min-width: 480px)')) {
+      if (Modernizr.mq('only all and (max-width: 480px)')) {
         initSkrollr();
       };
 
@@ -188,5 +191,7 @@ jQuery.noConflict();
       }
     }
   })
+
+  // enquire.register("screen and (min-width : 760px)", initAdjustWindow(), false);
 
 })(jQuery);
