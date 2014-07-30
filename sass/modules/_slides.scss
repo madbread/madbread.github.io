@@ -9,8 +9,7 @@ section {
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    // background-size: cover;
-    background-size: contain;
+    background-size: cover;
     height: $section-height;
     width: 100%;
   }
@@ -63,11 +62,6 @@ aside {
 }
 
 @media only screen and (min-width: $breakpoint-med) {
-
-  .bg {
-    background-size: cover;
-  }
-
   aside {
     font-size: $base-font-size + 3px;
     padding: 35px 0;

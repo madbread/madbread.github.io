@@ -85,51 +85,24 @@ jQuery.noConflict();
 
       initSkrollr = function(){
     
-        // Get window size
-        var winW = $window.width();
-        
-        // Init Skrollr for 768 and up
-        if( winW >= 760) {
-
+        // Check for touch
+        if(!Modernizr.touch) {
+     
           // Init Skrollr
           var s = skrollr.init({
-              forceHeight: false
+            forceHeight: false
           });
-
-        } else {
-
-          // Init Skrollr
-          var s = skrollr.init();
-          s.destroy();
         }
 
-        // Check for touch
-        if(Modernizr.touch) {
-     
-            // Init Skrollr
-            var s = skrollr.init();
-            s.destroy();
-        }
-        
-      },
-
-      initAdjustWindow = function() {
-
-        return {
-          match : function() {
-            initSkrollr();
-          },
-          unmatch : function() {
-            initSkrollr();
-          }
-        };
       };
 
   //Load Images 
 	$body.imagesLoaded( function() {
 		setTimeout(function() {
 	      
-      initSkrollr();
+      if (Modernizr.mq('only all and (min-width: 480px)')) {
+        initSkrollr();
+      };
 
 	    // Fade in sections
 		  $body.removeClass('loading').addClass('loaded');
@@ -215,7 +188,5 @@ jQuery.noConflict();
       }
     }
   })
-
-  enquire.register("screen and (min-width : 760px)", initAdjustWindow(), false);
 
 })(jQuery);
