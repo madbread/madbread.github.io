@@ -1,7 +1,11 @@
 jQuery.noConflict();
 
 ( function($) {
-	
+
+  if (Modernizr.mq('only all and (max-width: 480px)')) {
+    window.location = 'http://www.madbreadband.com/old/';
+  };
+
 	// Setup variables
 	var $body       = $('body'),
       $window     = $(window),
@@ -85,16 +89,30 @@ jQuery.noConflict();
 
       initSkrollr = function(){
     
-        // Init Skrollr
-        var s = skrollr.init({
-          forceHeight: false
-        });
+        // Get window size
+        var winW = $window.width();
+        
+        // Init Skrollr for 768 and up
+        if( winW >= 760) {
+
+          // Init Skrollr
+          var s = skrollr.init({
+              forceHeight: false
+          });
+
+        } else {
+
+          // Init Skrollr
+          var s = skrollr.init();
+          s.destroy();
+        }
 
         // Check for touch
         if(Modernizr.touch) {
      
-          var s = skrollr.init();
-          s.destroy();
+            // Init Skrollr
+            var s = skrollr.init();
+            s.destroy();
         }
 
       };
@@ -103,9 +121,7 @@ jQuery.noConflict();
 	$body.imagesLoaded( function() {
 		setTimeout(function() {
 	      
-      if (Modernizr.mq('only all and (max-width: 480px)')) {
-        initSkrollr();
-      };
+      initSkrollr();
 
 	    // Fade in sections
 		  $body.removeClass('loading').addClass('loaded');
@@ -191,7 +207,5 @@ jQuery.noConflict();
       }
     }
   })
-
-  // enquire.register("screen and (min-width : 760px)", initAdjustWindow(), false);
 
 })(jQuery);
