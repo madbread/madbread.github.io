@@ -1,5 +1,6 @@
 // Page Slides
 section { 
+  max-width: 480px;
   min-height: $section-height;
   overflow: hidden;
   position: relative;
@@ -62,6 +63,10 @@ aside {
 }
 
 @media only screen and (min-width: $breakpoint-med) {
+  section { 
+    max-width: 100%;
+  }
+  
   aside {
     font-size: $base-font-size + 3px;
     padding: 35px 0;
